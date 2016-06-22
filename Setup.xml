@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<test ostype="server">
+  <list>
+    <info>
+      <summary>This is a list system update test requirements.</summary>
+      <version>1.0</version>
+      <arch>x86_64</arch>
+      <date>2016-04-13</date>
+    </info>
+    <import>
+      <testtoolurl>http://192.168.32.18/testtool/</testtoolurl>
+      <Performance>Perf_cpu Perf_mem</Performance>
+      <!--Default performance test items-->
+      <testtype>Performance testtoolurl</testtype>
+    </import>
+    <description>
+      <!--funsupportlists:Supported function test items-->
+    </description>
+  </list>
+</test>
+

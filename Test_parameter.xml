@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--[Lart-i Test suite ]-->
+<Perftestsuite>
+  <SuiteInformation>
+    <Title>Test parameter setting</Title>
+    <Version>1.0.0</Version>
+    <TestType>Performane</TestType>
+    <Description>This test suite for Linux systems performance evaluation.</Description>
+    <Maintainer>isoft_lp</Maintainer>
+  </SuiteInformation>
+  <Execute>
+    <Test>Perf_kernel</Test>
+    <Perf_kernel>'lmbench',iterations=3</Perf_kernel>
+    <Description>lmbench</Description>
+  </Execute>
+  <Execute>
+    <Test>Perf_cpu</Test>
+    <Perf_cpu>tarbal=sysbench-0.4.12.tar.gz cpu_max_prime=10000,20000,30000 test_type=cpu runtimes=3 tag=cpu reboot=no</Perf_cpu>
+    <Description>sysbench</Description>
+  </Execute>
+  <Execute>
+    <Test>Perf_mem</Test>
+    <Perf_mem>tarbal=sysbench-0.4.12.tar.gz num_threads=4,8 test_type=memory block_size=4096 total_size=8G runtimes=3 tag='mem' reboot=no</Perf_mem>
+    <Description>sysbench</Description>
+  </Execute>
+</Perftestsuite>
