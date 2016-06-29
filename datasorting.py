@@ -8,6 +8,7 @@ class ResultSorting(object):
         return f
 
     def datasearch(self, searchmode, resultfile, times):
+        times=int(times)
         f = self.readfile(resultfile)
         re_list = re.findall(r"%s" % searchmode,f, re.S)
         testarry = []

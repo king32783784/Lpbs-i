@@ -29,20 +29,6 @@ data_search_path = {
     "sysbench_cpu" : "execution time \(avg\/stddev\):(.*?)\/0.00"
 }
 
-data_cpu_aidinfo = {
-    "search_path": "execution time \(avg\/stddev\):(.*?)\/0.00",
-    "chart_title": ('CPU Execution time (sec)'),
-    "subjects": ('10000', '20000', '30000'),
-    "chart_pngname": "chart.cpu.png",
-    "mdtmp":'''
-## Sysbench - Performance Test of CPU
-
-CPU Execution time(second) - 1thread - smaller is better
-
-*OS* | *10000* | *20000* | *30000*
------- | --------- | --------- | ---------
-'''}
-
 
 class MkResult(ResultSorting):
      def __init__(self, testitemaidinfo, times, resultfile, resultdir):
@@ -95,5 +81,5 @@ class MkResult(ResultSorting):
          mdfile = os.path.join(self.resultdir, 'Lpb_i.md')
          self._mkmdfile(mdfile)
          self._mkchart(mdfile)
-a = MkResult(data_cpu_aidinfo, 3, '/home/isoft_lp/Github/Lpbs_i/resulttmp/performance/Perf_cpu/result/result.out', '/home/isoft_lp/Github/Lpbs_i/finalresult')
-a.mkresult()
+#a = MkResult(data_cpu_aidinfo, 3, '/home/isoft_lp/Github/Lpbs_i/resulttmp/performance/Perf_cpu/result/result.out', '/home/isoft_lp/Github/Lpbs_i/finalresult')
+#a.mkresult()

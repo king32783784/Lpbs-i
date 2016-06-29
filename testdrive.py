@@ -52,7 +52,7 @@ class TestDrive(Daemon, ReadPublicinfo, TestParpare):
                 setup = StreamToLogger(stdout_logger, logging.INFO)
                 sys.stdout = setup
                 job = __import__('%s' % pertest)
-                runjob = job.DoTest(self.setupxml, self.testxml, self.homepath, finalresultdir )
+                runjob = job.DoTest(self.setupxml, self.testxml, self.homepath, finalresultdir)
                 runjob._setup()
                 Logging_Config.setlogger(pertest, '%s/result.out' % pathlist['result'])
                 stdout_logger = logging.getLogger(pertest)
