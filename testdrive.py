@@ -6,7 +6,7 @@ import shutil
 import sys
 import logging
 from initdaemon import Daemon
-from public import ReadPublicinfo
+from public import ReadPublicinfo, ReadSysinfo
 from runtest import RunTest
 from preparetest import TestParpare
 from logging_config import *
@@ -59,6 +59,10 @@ class TestDrive(Daemon, ReadPublicinfo, TestParpare):
                 test = StreamToLogger(stdout_logger, logging.INFO)
                 sys.stdout = test
                 runjob._runtest()
+            resultpath = os.path.join(self.homepath, 'resulttmp', pertesttype)     
+            resultdir = os.path.join(finalresultdir, ReadSysinfo.os_name())
+            print resultpath, resultdir
+            shutil.move(resultpath, resultdir)
 
     def _run(self):
         self.logger.info('test start')

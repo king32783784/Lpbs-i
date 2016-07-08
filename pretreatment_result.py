@@ -1,6 +1,5 @@
 import os
 from datasorting import ResultSorting
-from mkchart import MkChart
 from public import ReadSysinfo
 
 

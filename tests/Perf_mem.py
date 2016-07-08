@@ -6,7 +6,7 @@ import os
 from runtest import RunTest
 
 class DoTest(RunTest):
-    def __init__(self, setupxml, testxml, homepath):
+    def __init__(self, setupxml, testxml, homepath, finalresult):
         self.setupxml = os.path.abspath(setupxml)
         self.testxml = os.path.abspath(testxml)
         self.homepath = homepath
