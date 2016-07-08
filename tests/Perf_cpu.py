@@ -4,21 +4,15 @@
 '''
 import os
 from runtest import RunTest
-from mkresult import MkResult
+from pretreatment_result import MkResult
+
 
 data_cpu_aidinfo = {
     "search_path": "execution time \(avg\/stddev\):(.*?)\/0.00",
     "chart_title": ('CPU Execution time (sec)'),
     "subjects": ('10000', '20000', '30000'),
-    "chart_pngname": "chart.cpu.png",
-    "mdtmp":'''
-## Sysbench - Performance Test of CPU
-
-CPU Execution time(second) - 1thread - smaller is better
-
-*OS* | *10000* | *20000* | *30000*
------- | --------- | --------- | ---------
-'''}
+    "itemname" : "sysbench_cpu",
+}
 
 
 class DoTest(RunTest):

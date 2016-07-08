@@ -37,7 +37,6 @@ class TestParpare():
         def add_mkdir(self, default, sep, *args):
             try:
                 default = os.path.join(default, sep.join(args))
-                print default
                 os.makedirs(default)
             except OSError:
                 print 'joinpath filed'
