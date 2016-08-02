@@ -40,7 +40,7 @@ class RunTest(TestSetup, ParameterAnalysis):
             testcmd.wait()
             exitcode = testcmd.poll()
             if exitcode != 0:
-                defectlist.append(cmd)
+                defectlist.append(arg)
         if len(defectlist) > 0:
             RunTest.packageinstall(defectlist)
 
