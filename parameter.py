@@ -25,5 +25,5 @@ class ParameterAnalysis():
 
 # testcase
 # test = ParameterAnalysis()
-# a = test.baseparameter('Perf_cpu')
+# a = test.baseparameter('Perf_io', 'Test_parameter.xml')
 # print a

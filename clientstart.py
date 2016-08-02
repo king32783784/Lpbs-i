@@ -31,4 +31,4 @@ if __name__ == "__main__":
     sys.path.append(os.path.abspath('tests'))
     xmlfile = recivefile()
     Mytestapp = TestDrive(xmlfile['setupxml'], xmlfile['testxml'])
-    Mytestapp.start()
+    Mytestapp._run()

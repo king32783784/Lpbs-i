@@ -15,18 +15,18 @@ class Logging_Config():
         # set FileHandler Level DEBUG
         fh.setLevel(logging.DEBUG)
         # create console handler with a higher log level 
-        # ch = logging.StreamHandler()
+        ch = logging.StreamHandler()
         # set console handeler Level ERROR
-        # ch.setLevel(logging.DEBUG)
+        ch.setLevel(logging.DEBUG)
         # create formatter and add it to the handlers
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         # set FileHandler format
         fh.setFormatter(formatter)
         # set console formatter
-        # ch.setFormatter(formatter)
+        ch.setFormatter(formatter)
         # add the handler to the logger
         logger.addHandler(fh)
-        # logger.addHandler(ch)
+ #       logger.addHandler(ch)
 
 
 class StreamToLogger():

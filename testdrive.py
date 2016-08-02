@@ -5,20 +5,18 @@ import os
 import shutil
 import sys
 import logging
-from initdaemon import Daemon
 from public import ReadPublicinfo, ReadSysinfo
 from runtest import RunTest
 from preparetest import TestParpare
 from logging_config import *
 
 
-class TestDrive(Daemon, ReadPublicinfo, TestParpare):
+class TestDrive(ReadPublicinfo, TestParpare):
     logger = logging.getLogger('client')
     homepath = os.getcwd()
 
     def __init__(self, setupxml, testxml):
         ReadPublicinfo.__init__(self, setupxml, testxml)
-        Daemon.__init__(self)
         self.setupxml = setupxml
         self.testxml = testxml
 

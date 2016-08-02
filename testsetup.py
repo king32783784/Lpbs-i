@@ -91,7 +91,6 @@ class TestSetup(TestParpare):
             except OSError:
                 pass
 
-    @staticmethod
     def packageinstall(defectlist):
         packagetool = self.pacagemanger('dnf', 'yum', 'apt-get')
         for defect in defectlist:

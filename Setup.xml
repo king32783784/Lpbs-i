@@ -10,12 +10,29 @@
     </info>
     <import>
       <testtoolurl>http://192.168.32.18/testtool/</testtoolurl>
-      <Performance>Perf_cpu Perf_mem</Performance>
+      <Performance>Perf_java</Performance>
       <!--Default performance test items-->
       <testtype>Performance testtoolurl</testtype>
     </import>
     <description>
       <!--funsupportlists:Supported function test items-->
+      <support>Perf_cpu Perf_mem Perf_io Perf_thread Perf_system Perf_kernel Perf_browser Perf_graphics Perf_stream Perf_java</support>
+      <!--Perf_cpu:sysbench-->
+      <!--Perf_spec0:spec2000 off-->
+      <!--Perf_spec6:spec2006 off-->
+      <!--Perf_mem:sysbench-->
+      <!--Perf_stream:stream-->
+      <!--Perf_io:iozone-->
+      <!--Perf_system:unixbench-->
+      <!--perf_kernel:lmbench-->
+      <!--perf_2d:qtperf+x11perf-->
+      <!--Perf_3d:GLmark+glxgears-->
+      <!--Perf_java:SPEC-JVM2008-->
+      <!--Perf_browser:browsertest-->
+      <!--Perf_net:netperf off-->
+      <!--Perf_compiler:pts off-->
+      <!--Perf_compression:pts off-->
+      <!--Perf_encoding:pts off-->
     </description>
   </list>
 </test>
