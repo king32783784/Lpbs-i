@@ -29,11 +29,8 @@ class DoTest(RunTest):
         print basearg
         runtimes = basearg['runtimes']
         args_itmp = basearg['c'].split(',')
-        args_u = ''
         for arg in args_itmp:
-            args_u = args_u + ' -c ' + arg
-        args_u = ' -i 5' + args_u + ' context1'
-        RunTest._dotest('Run', args_u , runtimes)
+            RunTest._dotest('unixbench', arg , runtimes)
 # testcase
 #a = Perf_cpu('Testsetup_sample.xml', 'Test_parameter.xml')
 #a._setup()

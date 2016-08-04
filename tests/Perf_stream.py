@@ -27,13 +27,7 @@ class DoTest(RunTest):
     def _runtest(self):
         basearg = self.baseparameter('Perf_stream', self.testxml)
         print basearg
+        threads = basearg['thread'].split(',')
         runtimes = basearg['runtimes']
-        RunTest._dotest('stream_test', '', runtimes)
-        
-#        resulttmppath = os.path.join(self.homepath, 'resulttmp/performance/Perf_cpu/result/result.out')
-#        doprocessresult = MkResult(data_cpu_aidinfo, runtimes, resulttmppath, self.result)
-#        doprocessresult.mkresult()          
-# testcase
-#a = Perf_cpu('Testsetup_sample.xml', 'Test_parameter.xml')
-#a._setup()
-#a._runtest()
+        for thread in threads:
+            RunTest._dotest('stream_test', thread, runtimes)

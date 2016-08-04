@@ -35,7 +35,7 @@
   </Execute>
   <Execute>
    <Test>Perf_system</Test>
-   <Perf_system>tarbal=unixbench-5.1.3.tar.gz runtimes=1 c=4,8 tag='system' reboot=no</Perf_system>
+   <Perf_system>tarbal=unixbench-5.1.3.tar.gz runtimes=3 c=1,4 tag='system' reboot=no</Perf_system>
    <Description>unixbench</Description>
    </Execute>
    <Execute>
@@ -50,7 +50,7 @@
    </Execute>
    <Execute>
    <Test>Perf_stream</Test>
-   <Perf_stream>tarbal=stream-5.9.tar.gz runtimes=3 tag='stream' reboot=no</Perf_stream>
+   <Perf_stream>tarbal=stream-5.9.tar.gz runtimes=3 thread=1,4,16 tag='stream' reboot=no</Perf_stream>
    <Description>stream</Description>
    </Execute>
    <Execute>

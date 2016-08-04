@@ -10,7 +10,7 @@
     </info>
     <import>
       <testtoolurl>http://192.168.32.18/testtool/</testtoolurl>
-      <Performance>Perf_java</Performance>
+      <Performance>Perf_system</Performance>
       <!--Default performance test items-->
       <testtype>Performance testtoolurl</testtype>
     </import>
