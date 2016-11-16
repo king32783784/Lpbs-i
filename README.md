@@ -9,6 +9,7 @@
     * Perf_browser: css4 html5 acid3 v8test octane dromaeotest
     * Perf_graphics: qtperf unixbench(x11perf glxgears) glmark
     * Perf_java: SpecJVM2008
+    * Perf_stream: stream
 ### Planning add item list 
     * Perf_net: netperf
     * Perf_compiler: pts-compiler
