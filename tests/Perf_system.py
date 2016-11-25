@@ -19,7 +19,7 @@ class DoTest(RunTest):
         '''
         print self.setupxml
         print self.testxml
-        RunTest._depend('gcc', 'make')
+        RunTest._depend('gcc', 'make', 'perl-Time-HiRes')
         srcdir = RunTest._pretesttool(self.setupxml, self.testxml, 'Perf_system', self.homepath)
         os.chdir(srcdir)
         self._make('')
