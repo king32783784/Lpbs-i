@@ -28,7 +28,7 @@ class DoTest(RunTest):
         basearg = self.baseparameter('Perf_browser', self.testxml)
         print basearg
         runtimes = basearg['runtimes']
-     #   RunTest._dotest('setup', '', runtimes)
+        RunTest._dotest('setup', '', runtimes)
         RunTest._dotest('/usr/bin/python', 'browser-run.py', 1)
         
 # resulttmppath = os.path.join(self.homepath, 'resulttmp/performance/Perf_cpu/result/result.out')

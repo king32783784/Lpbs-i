@@ -19,7 +19,7 @@ class DoTest(RunTest):
         '''
         print self.setupxml
         print self.testxml
-        RunTest._depend('gcc', 'make','expect', 'gcc-c++', 'glew-devel', 'SDL-devel') 
+        RunTest._depend('gcc', 'make','expect', 'gcc-c++', 'glew-devel', 'SDL-devel', 'qt5*', 'qt5-qttools-devel') 
         srcdir = RunTest._pretesttool(self.setupxml, self.testxml, 'Perf_graphics', self.homepath)
         os.chdir(srcdir)
         RunTest._dotest('Make', '', 1)
